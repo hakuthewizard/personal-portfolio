@@ -1,0 +1,208 @@
+html {
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    margin:0;
+    color:white;
+    font-family: 'JetBrains Mono', monospace;
+    
+}
+.container {
+    background: linear-gradient(rgb(190, 129, 255),rgb(255, 255, 255));
+    display: grid;
+    max-width:100vw;
+    height: 100vh;
+    grid-template-areas: "nav nav nav"
+    "about image image"
+    "intro intro intro"
+    "social social projects"
+    "foot foot foot";
+    grid-template-rows: 15% 30% 15% 30% 10%;
+    row-gap: 1px;
+    column-gap: 1px;
+
+}
+.container > .navbar {
+grid-area: nav;
+font-size: 28px;
+justify-content: flex-end;
+align-items: space-around;
+margin-right: 32px;
+padding: 16px;
+display:grid;
+}
+.home:hover {
+    color:black;
+}
+.contact:hover {
+    color:black;
+}
+
+.container > .about {
+    grid-area: about;
+    justify-content:baseline;
+    align-items:center;
+    font-size: 42px;
+    display:grid;
+    margin: 0;
+    transform: rotate(270deg);
+    color:rgb(255, 255, 255);
+    background-color: black;
+    box-shadow: -1rem -1rem rgb(190, 129, 255);
+}
+.container > .about:hover {
+    color: rgb(190, 129, 255);
+}
+.container > .projects-tab:hover {
+    color: rgb(190, 129, 255);
+}
+.home {
+    padding:10px;
+}
+
+
+.container > .picture {
+    grid-area: image;
+    display:grid;
+    justify-content: flex-start;
+}
+.beyza {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    opacity:0.9;
+    background-color: black;
+    box-shadow: -2rem -1.5rem rgb(160, 72, 255);
+}
+.container > .introduction {
+    grid-area: intro;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    display:grid;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(190, 129, 255);
+}
+.container > .social-media {
+    grid-area: social;
+    display:grid;
+    float:right;
+    justify-content:flex-start;
+    align-items:flex-end;
+    width: 50px;
+    font-size: 40px;
+    background-color: rgb(0, 0, 0);
+
+}
+.container > .projects-tab {
+    grid-area: projects;
+    align-items: center;
+    justify-content:flex-start;
+    font-size: 48px;
+    display:grid;
+    color:rgb(255, 255, 255);
+    background-color: black;
+    box-shadow: -1rem 1rem rgb(190, 129, 255);
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+.social:hover {
+    color:rgb(190, 129, 255);
+}
+.navbarprojects {
+    font-size: 28px;
+    padding: 16px;
+    display:flex;
+    justify-content: flex-end;
+    background-color:rgb(190, 129, 255);
+    color:rgb(255, 255, 255);
+
+    }
+.navbarprojects:hover {
+    color:black;
+}
+.projects {
+    display: grid;
+    align-items:center;
+    justify-content:space-around;
+    width:100vw;
+    min-height:100vh;
+    background: linear-gradient(rgb(190, 129, 255),rgb(255, 255, 255));
+    color:black;
+
+}
+.projects > #gridItem {
+    border:2px solid black;
+}
+ .projects > #gridItem > a:hover {
+    color: rgb(0, 0, 0);
+    background: linear-gradient(rgb(162, 75, 255),rgb(255, 255, 255));
+    
+}
+.aboutMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    max-width: 50vw;
+    height: 70vh;
+    margin: 0 auto;
+    color:black;
+}
+.container > .contactMe {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width:100vw;
+    height: 70vh;
+    text-align: center;
+    margin: 0 auto;
+}
+.contactName, .contactMail {
+    all: unset;
+    color:black;
+    border: 3px solid black;
+    text-decoration: none;
+    width: 300px;
+    height: 50px;
+
+}
+.labels {
+    margin: 2px;
+    padding: 2px;
+    color: black;
+}
+.textArea {
+    all: unset;
+    width: 300px;
+    height: 100px;
+    border: 3px solid black;
+}
+.contactButton {
+    all: unset;
+    width: 300px;
+    height: 50px;
+    color:black;
+    font-size: 20px;
+    cursor: pointer;
+    border: 3px solid black;
+}
+.contactButton:hover {
+    background: linear-gradient(rgb(190, 129, 255),rgb(255, 255, 255));
+}
+#gridItem > h2 {
+    display: grid;
+    font-size: 1.5rem;
+    padding:0.2rem;
+    justify-content: center;
+}
+#gridItem > a {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding:0.2rem;
+}
