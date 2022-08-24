@@ -9,7 +9,6 @@ body {
     
 }
 .container {
-    background: linear-gradient(rgb(190, 129, 255),rgb(255, 255, 255));
     display: grid;
     max-width:100vw;
     height: 100vh;
@@ -33,33 +32,35 @@ padding: 16px;
 display:grid;
 }
 .home:hover {
-    color:black;
+    color:rgb(255, 0, 162);
+    border: 2px solid rgb(255, 0, 162);
 }
 .contact:hover {
-    color:black;
+    color:rgb(255, 0, 162);
+    border: 2px solid rgb(255, 0, 162);
 }
 
 .container > .about {
-    grid-area: about;
+    grid-area: "about";
     justify-content:baseline;
     align-items:center;
-    font-size: 42px;
+    font-size: 3rem;
     display:grid;
-    margin: 0;
+    max-height: 25vw;
+    padding:0.3rem;
     transform: rotate(270deg);
     color:rgb(255, 255, 255);
     background-color: black;
-    box-shadow: -1rem -1rem rgb(190, 129, 255);
+    box-shadow: -0.2rem -0.5rem rgb(123, 0, 255);
 }
-.container > .about:hover {
-    color: rgb(190, 129, 255);
-}
-.container > .projects-tab:hover {
-    color: rgb(190, 129, 255);
-}
-.home {
+/*.container > .projects-tab:hover {
+    color: rgb(123, 0, 255);
+    }*/
+
+.home, .contact {
     padding:10px;
 }
+
 
 
 .container > .picture {
@@ -70,86 +71,111 @@ display:grid;
 .beyza {
     border: 2px solid rgb(255, 255, 255);
     border-radius: 50%;
-    background-color: black;
-    box-shadow: -2rem -1.5rem rgb(160, 72, 255);
+    
 }
 .container > .introduction {
     grid-area: intro;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 1.5rem;
+    margin-bottom:0.5rem;
     display:grid;
     color: rgb(0, 0, 0);
     border: 2px solid rgb(190, 129, 255);
 }
 .container > .social-media {
-    grid-area: social;
     display:grid;
-    float:right;
     justify-content:flex-start;
     align-items:flex-end;
-    width: 50px;
-    font-size: 40px;
+    max-height: 50vh;
+    margin: 1rem 1rem 0 0;
+    width:3rem;
+    font-size: 2rem;
     background-color: rgb(0, 0, 0);
+    box-shadow: 0.5rem 0.5rem rgb(123, 0, 255);
 
 }
-.container > .projects-tab {
+.projects-tab {
     grid-area: projects;
     align-items: center;
     justify-content:flex-start;
-    font-size: 48px;
+    font-size: 3rem;
+    margin: 1rem;
     display:grid;
+    max-width: 50vw;
+    padding:0.3rem;
     color:rgb(255, 255, 255);
     background-color: black;
-    box-shadow: -1rem 1rem rgb(190, 129, 255);
+    box-shadow: 0.2rem 0.5rem  rgb(123, 0, 255);
+    transition: 0.1s all fade-in;
+}
+.border:hover
+{
+        box-shadow: -10px -10px rgb(255, 0, 162);
+        background-color:rgb(255, 255, 255);
+        color:black;
+        font-size: 3rem;
+        transition: 0.2s ease-out;    
+}
+.border1:hover {
+    box-shadow: 10px 10px rgb(255, 0, 162);
+    background-color:rgb(255, 255, 255);
+    color:black;
+    font-size: 3rem;
+    transition: 0.2s ease-out;    
 }
 
 a {
     all: unset;
     cursor: pointer;
 }
+
 .social:hover {
-    color:rgb(190, 129, 255);
+    color:rgb(255, 0, 162);
 }
 .navbarprojects {
     font-size: 28px;
     padding: 16px;
     display:flex;
     justify-content: flex-end;
-    background-color:rgb(190, 129, 255);
+    background-color:rgb(0, 0, 0);
     color:rgb(255, 255, 255);
 
     }
-.navbarprojects:hover {
-    color:black;
-}
 .projects {
     display: grid;
     align-items:center;
     justify-content:space-around;
     width:100vw;
     min-height:100vh;
-    background: linear-gradient(rgb(190, 129, 255),rgb(255, 255, 255));
-    color:black;
+    background: black;
+    color:rgb(255, 255, 255);
 
 }
 .projects > #gridItem {
-    border:2px solid black;
+    border:0.1px solid rgb(255, 255, 255);
 }
  .projects > #gridItem > a:hover {
     color: rgb(0, 0, 0);
-    background: linear-gradient(rgb(162, 75, 255),rgb(255, 255, 255));
+    background:rgb(255, 255, 255);
     
 }
 .aboutMe {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    max-width: 50vw;
-    height: 70vh;
     margin: 0 auto;
-    color:black;
+    margin-top:15%;
+    max-height: 50vh;
+    font-size: 1.5rem;
+    position: absolute;
+    color:rgb(255, 255, 255);
+    border: 5px solid rgb(255, 0, 162);
+    padding: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    z-index: -1;
+}
+.aboutMe p {
+    justify-self: center;
 }
 .container > .contactMe {
     display: grid;
@@ -163,8 +189,8 @@ a {
 }
 .contactName, .contactMail {
     all: unset;
-    color:black;
-    border: 3px solid black;
+    color:rgb(123, 0, 255);
+    border: 3px solid rgb(123, 0, 255);
     text-decoration: none;
     width: 300px;
     height: 50px;
@@ -173,25 +199,29 @@ a {
 .labels {
     margin: 2px;
     padding: 2px;
-    color: black;
+    color: rgb(255, 255, 255);
+ 
 }
 .textArea {
     all: unset;
     width: 300px;
     height: 100px;
-    border: 3px solid black;
+    border: 3px solid rgb(255, 0, 162);
+    color:rgb(123, 0, 255);
 }
+
 .contactButton {
     all: unset;
     width: 300px;
     height: 50px;
-    color:black;
+    color:rgb(123, 0, 255);
     font-size: 20px;
     cursor: pointer;
-    border: 3px solid black;
+    border: 3px solid rgb(123, 0, 255);
 }
 .contactButton:hover {
-    background: linear-gradient(rgb(190, 129, 255),rgb(255, 255, 255));
+    background: linear-gradient(rgb(255, 0, 162),rgb(123, 0, 255));
+    color:white;
 }
 #gridItem > h2 {
     display: grid;
@@ -205,3 +235,29 @@ a {
     align-items: center;
     padding:0.2rem;
 }
+.gradient-border {
+      background: linear-gradient(
+        60deg,
+        rgb(123, 0, 255),
+        rgb(255, 0, 162),
+        rgb(255, 255, 255),
+        rgb(123, 0, 255)
+      );
+      background-size: 300% 300%;
+      background-position: 0 50%;
+      border-radius: calc(2 * var(--border-width));
+      animation: moveGradient 4s alternate infinite;
+    }
+  
+  @keyframes moveGradient {
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+ .home:hover, .contact:hover{
+    color:rgb(255, 0, 162);
+    border: 2px solid rgb(255, 0, 162);
+  }
+  .heading {
+    color:black;
+  }
