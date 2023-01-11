@@ -146,6 +146,7 @@ a {
     display: grid;
     align-items:center;
     justify-content:space-around;
+    text-align:center;
     width:100vw;
     min-height:100vh;
     background: black;
